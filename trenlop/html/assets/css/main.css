@@ -74,6 +74,7 @@
     top: 100%;
     padding: 8px;
     border-radius: 2px;
+    display: none;
 }
 
 .header__qr-img, .header__qr-img-app{
@@ -82,8 +83,133 @@
 
 .header__app{
     display: flex;
-
+    justify-content: space-between;
 }
 .header__qr-img-app{
-    height: 17px;
+    height: 19px;
+}
+/* hover qr code */
+.header__navbar-item--has-qr:hover .header_qr{
+    display: block;
+}
+
+/* hover THông báo */
+.header__notify{
+    position: absolute;
+    top: 118%;
+    right: 0px;
+    width: 404px;
+    border: 1px solid #D3D3D3;
+    background-color: var(--white-color);
+    animation: headerNotifyGrowth ease-in 0.25s;
+    transform-origin: top right;
+    display: none;
+}
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+}
+/* cách hiển thị của thông báo */
+@keyframes headerNotifyGrowth {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.header__notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+    margin: 0 0 0 12px;
+    cursor: default;
+
+}
+.header__notify-header h3{
+    color: #999;
+    margin: 0;
+    font-weight: 400px;
+    font-size: 1.6rem;
+    line-height: 40px;
+
+}
+.header__notify-list{
+    padding-left: 0;
+}
+.header__notify-item{
+    background-color: #FFF1EE;
+}
+.header__notify-item:hover{
+    background-color: var(--white-color);
+}
+.header__notify-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+
+}
+.header__notify-img{
+    width: 48px;
+    /* height: 48px; */
+    object-fit: contain;
+}
+.header__notify-info{
+    margin-left: 12px;
+}
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+
+}
+.header__notify-description{
+    display: block;
+    font-size: 1.2rem;
+    color: #999;
+    line-height: 3rem;
+    /* margin-top: 6px; */
+}
+.header__notify-footer{
+    display: flex;
+    height: 35px;
+}
+.header__notify-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 32px;
+    margin: auto;
+    font-size: 400;
+}
+
+/* CSS form  đăng ký*/
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.auth-form__container{
+    padding: 0 32px;
+}
+
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.auth-form__switch-btn{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.auth-form__form{
+    width: 500px;
+}
+.auth-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
 }
