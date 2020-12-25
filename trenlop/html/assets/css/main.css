@@ -1,0 +1,89 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #F6372B, #FF5A2F);
+    display: flex;
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+.header__navbar-item{
+    margin: 0 8px;
+}
+
+.header__navbar-item, .header__navbar-item-link{
+    display: inline-block;  
+    font-size: 1.4rem;
+    color: var(--white-color);
+    /* Bỏ dấu gạch chân */
+    text-decoration: none;
+    font-weight: 300;
+}
+/* rê chuột vào làm mờ đi chữ */
+.header__navbar-item:hover, .header__navbar-item-link:hover, 
+.header__navbar-icon-link:hover{
+    /* rê vào có hình bàn tay */
+    cursor: pointer; 
+    color: rgba(255, 255, 255, 0.7  );
+}
+
+.header__navbar-item--bold{
+    font-weight: 500;
+}
+/* gạch đứng */
+/* .header__navbar-item--brickstanding::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid white;
+    height: 12px;
+    right: 0px;
+    top: 0px;
+
+} */
+/* icon */
+.header__navbar-icon-link{
+    text-decoration: none;
+    color: var(--white-color);
+    
+}
+.header__navbar-icon{
+    font-size: 1.8rem;
+    margin: 0 8px;
+}
+
+.header__navbar-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+.header__navbar-item{
+    position: relative;
+}
+
+/* HEADER QR CODE */
+.header_qr{
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+.header__qr-img, .header__qr-img-app{
+    width: 100%;
+}
+
+.header__app{
+    display: flex;
+
+}
+.header__qr-img-app{
+    height: 17px;
+}
